@@ -9,12 +9,12 @@ const router = express.Router();
 
 interface AuthRequest extends Request {
   user?: {
-    email : Types.email,
+    email : user.email,
     _id: Types.ObjectId;
   };
 }
 
-// ✅ WRITE BLOG
+
 router.post("/writeblog", async (req: AuthRequest, res: Response): Promise<Response> => {
   try {
     const user = req.user;
