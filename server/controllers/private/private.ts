@@ -22,7 +22,7 @@ router.post("/writeblog", async (req: AuthRequest, res: Response): Promise<Respo
       return res.status(401).json({ msg: "user not found" });
     }
 
-    const { blogName, blogBody } = req.body;
+    const { blogTitle, description,content} = req.body;
 
     const blog = {
       blogTitle:String,
